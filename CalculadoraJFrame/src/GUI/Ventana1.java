@@ -9,16 +9,16 @@ import java.awt.Color;
 
 public class Ventana1 extends javax.swing.JFrame {
 
-  public String B1;
-  public String Text;
-  public boolean igual = false;
-  Servicios servicios = new Servicios("", 0, 0, "", "", "", "", "");
+   public String B1;
+   public String Text;
+   public boolean igual = false;
+   Servicios servicios = new Servicios("", 0, 0, "", "", "", "", "");
 
-  public Ventana1() {
-    initComponents();
-  }
+   public Ventana1() {
+      initComponents();
+   }
 
-  @SuppressWarnings("unchecked")
+   @SuppressWarnings("unchecked")
    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
    private void initComponents() {
 
@@ -555,260 +555,260 @@ public class Ventana1 extends javax.swing.JFrame {
    }// </editor-fold>//GEN-END:initComponents
 
   private void jMenu1MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu1MenuSelected
-    Creditos c1 = new Creditos();
-    c1.setVisible(true);
+     Creditos c1 = new Creditos();
+     c1.setVisible(true);
   }//GEN-LAST:event_jMenu1MenuSelected
 
   private void IgualBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IgualBtnMouseClicked
 
-    if (igual == false) {
-      if (servicios.getAcumMostrar().length() <= 28) {
-        servicios.setAcumMostrar(servicios.getAcumMostrar() + " = ");
-      }
-      servicios.setOperacion(" = ");
-      servicios.asignacion(servicios.getMostrar(), servicios.getNumeritos(), servicios.getNumeritos2(), servicios.getOperacion(), servicios.getAux());
-      servicios.setNumeritos(servicios.Resultado(servicios.getAux(), servicios.getNumeritos(), servicios.getNumeritos2(), servicios.getPorcentaje(), servicios.getOperacion(), servicios.getAux2()));
-      Pantalla1.setText(String.valueOf(servicios.getNumeritos()));
-      Pantalla.setText(servicios.getAcumMostrar());
-      servicios.Reset();
-    }
+     if (igual == false) {
+        if (servicios.getAcumMostrar().length() <= 28) {
+           servicios.setAcumMostrar(servicios.getAcumMostrar() + " = ");
+        }
+        servicios.setOperacion(" = ");
+        servicios.asignacion(servicios.getMostrar(), servicios.getNumeritos(), servicios.getNumeritos2(), servicios.getOperacion(), servicios.getAux());
+        servicios.setNumeritos(servicios.Resultado(servicios.getAux(), servicios.getNumeritos(), servicios.getNumeritos2(), servicios.getPorcentaje(), servicios.getOperacion(), servicios.getAux2()));
+        Pantalla1.setText(String.valueOf(servicios.getNumeritos()));
+        Pantalla.setText(servicios.getAcumMostrar());
+        servicios.Reset();
+     }
 
   }//GEN-LAST:event_IgualBtnMouseClicked
 
   private void PuntoBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PuntoBtnMouseClicked
 
-    if (servicios.validarBoton(servicios.getMostrar()) == true && servicios.getAcumMostrar().length() <= 28) {
-      servicios.setMostrar(servicios.getMostrar() + ".");
-      servicios.setAcumMostrar(servicios.getAcumMostrar() + ".");
-    }
+     if (servicios.validarBoton(servicios.getMostrar()) == true && servicios.getAcumMostrar().length() <= 28) {
+        servicios.setMostrar(servicios.getMostrar() + ".");
+        servicios.setAcumMostrar(servicios.getAcumMostrar() + ".");
+     }
 
-    Pantalla.setText(servicios.getAcumMostrar());
-    Pantalla1.setText(servicios.getMostrar());
+     Pantalla.setText(servicios.getAcumMostrar());
+     Pantalla1.setText(servicios.getMostrar());
   }//GEN-LAST:event_PuntoBtnMouseClicked
 
   private void CeroBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CeroBtnMouseClicked
-    servicios.setMostrar(servicios.getMostrar() + "0");
-    if (servicios.getAcumMostrar().length() <= 28) {
-      servicios.setAcumMostrar(servicios.getAcumMostrar() + "0");
-      Pantalla.setText(servicios.getAcumMostrar());
-      Pantalla1.setText(servicios.getMostrar());
-    } else {
-      Pantalla.setText("ERROR ");
-      Pantalla1.setText("Máximo de dígitos");
-    }
-    igual = false;
+     servicios.setMostrar(servicios.getMostrar() + "0");
+     if (servicios.getAcumMostrar().length() <= 28) {
+        servicios.setAcumMostrar(servicios.getAcumMostrar() + "0");
+        Pantalla.setText(servicios.getAcumMostrar());
+        Pantalla1.setText(servicios.getMostrar());
+     } else {
+        Pantalla.setText("ERROR ");
+        Pantalla1.setText("Máximo de dígitos");
+     }
+     igual = false;
   }//GEN-LAST:event_CeroBtnMouseClicked
 
   private void SumaBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SumaBtnMouseClicked
 
-    if (servicios.getOperacion().equals("")) {
-      servicios.setOperacion(" + ");
-      if (servicios.getAcumMostrar().length() <= 30) {
-        servicios.setAcumMostrar(servicios.getAcumMostrar() + " + ");
-      }
-      servicios.asignacion(servicios.getMostrar(), servicios.getNumeritos(), servicios.getNumeritos2(), servicios.getOperacion(), servicios.getAux());
-      Pantalla.setText(servicios.getAcumMostrar());
-      Pantalla1.setText(servicios.getMostrar());
-    }
+     if (servicios.getOperacion().equals("")) {
+        servicios.setOperacion(" + ");
+        if (servicios.getAcumMostrar().length() <= 30) {
+           servicios.setAcumMostrar(servicios.getAcumMostrar() + " + ");
+        }
+        servicios.asignacion(servicios.getMostrar(), servicios.getNumeritos(), servicios.getNumeritos2(), servicios.getOperacion(), servicios.getAux());
+        Pantalla.setText(servicios.getAcumMostrar());
+        Pantalla1.setText(servicios.getMostrar());
+     }
   }//GEN-LAST:event_SumaBtnMouseClicked
 
   private void TresBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TresBtnMouseClicked
-    servicios.setMostrar(servicios.getMostrar() + "3");
-    if (servicios.getAcumMostrar().length() <= 28) {
-      servicios.setAcumMostrar(servicios.getAcumMostrar() + "3");
-      Pantalla.setText(servicios.getAcumMostrar());
-      Pantalla1.setText(servicios.getMostrar());
-    } else {
-      Pantalla.setText("ERROR ");
-      Pantalla1.setText("Máximo de dígitos");
-      servicios.Reset();
-    }
-    igual = false;
+     servicios.setMostrar(servicios.getMostrar() + "3");
+     if (servicios.getAcumMostrar().length() <= 28) {
+        servicios.setAcumMostrar(servicios.getAcumMostrar() + "3");
+        Pantalla.setText(servicios.getAcumMostrar());
+        Pantalla1.setText(servicios.getMostrar());
+     } else {
+        Pantalla.setText("ERROR ");
+        Pantalla1.setText("Máximo de dígitos");
+        servicios.Reset();
+     }
+     igual = false;
   }//GEN-LAST:event_TresBtnMouseClicked
 
   private void DosBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DosBtnMouseClicked
 
-    servicios.setMostrar(servicios.getMostrar() + "2");
-    if (servicios.getAcumMostrar().length() <= 28) {
-      servicios.setAcumMostrar(servicios.getAcumMostrar() + "2");
-      Pantalla.setText(servicios.getAcumMostrar());
-      Pantalla1.setText(servicios.getMostrar());
-    } else {
-      Pantalla.setText("ERROR ");
-      Pantalla1.setText("Máximo de dígitos");
-      servicios.Reset();
-    }
-    igual = false;
+     servicios.setMostrar(servicios.getMostrar() + "2");
+     if (servicios.getAcumMostrar().length() <= 28) {
+        servicios.setAcumMostrar(servicios.getAcumMostrar() + "2");
+        Pantalla.setText(servicios.getAcumMostrar());
+        Pantalla1.setText(servicios.getMostrar());
+     } else {
+        Pantalla.setText("ERROR ");
+        Pantalla1.setText("Máximo de dígitos");
+        servicios.Reset();
+     }
+     igual = false;
   }//GEN-LAST:event_DosBtnMouseClicked
 
   private void UnoBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UnoBtnMouseClicked
 
-    servicios.setMostrar(servicios.getMostrar() + "1");
-    if (servicios.getAcumMostrar().length() <= 28) {
-      servicios.setAcumMostrar(servicios.getAcumMostrar() + "1");
-      Pantalla.setText(servicios.getAcumMostrar());
-      Pantalla1.setText(servicios.getMostrar());
-    } else {
-      Pantalla.setText("ERROR ");
-      Pantalla1.setText("Máximo de dígitos");
-      servicios.Reset();
-    }
-    igual = false;
-  }//GEN-LAST:event_UnoBtnMouseClicked
-
-  private void RestaBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RestaBtnMouseClicked
-    if (servicios.getOperacion().equals("")) {
-      servicios.setOperacion(" - ");
-      if (servicios.getAcumMostrar().length() <= 30) {
-        servicios.setAcumMostrar(servicios.getAcumMostrar() + " - ");
-      }
-      servicios.asignacion(servicios.getMostrar(), servicios.getNumeritos(), servicios.getNumeritos2(), servicios.getOperacion(), servicios.getAux());
-      Pantalla.setText(servicios.getAcumMostrar());
-      Pantalla1.setText(servicios.getMostrar());
-    }
-  }//GEN-LAST:event_RestaBtnMouseClicked
-
-  private void SeisBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SeisBtnMouseClicked
-    servicios.setMostrar(servicios.getMostrar() + "6");
-    if (servicios.getAcumMostrar().length() <= 28) {
-      servicios.setAcumMostrar(servicios.getAcumMostrar() + "6");
-      Pantalla.setText(servicios.getAcumMostrar());
-      Pantalla1.setText(servicios.getMostrar());
-    } else {
-      Pantalla.setText("ERROR ");
-      Pantalla1.setText("Máximo de dígitos");
-      servicios.Reset();
-    }
-    igual = false;
-  }//GEN-LAST:event_SeisBtnMouseClicked
-
-  private void CincoBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CincoBtnMouseClicked
-    servicios.setMostrar(servicios.getMostrar() + "5");
-    if (servicios.getAcumMostrar().length() <= 28) {
-      servicios.setAcumMostrar(servicios.getAcumMostrar() + "5");
-      Pantalla.setText(servicios.getAcumMostrar());
-      Pantalla1.setText(servicios.getMostrar());
-    } else {
-      Pantalla.setText("ERROR ");
-      Pantalla1.setText("Máximo de dígitos");
-      servicios.Reset();
-    }
-    igual = false;
-  }//GEN-LAST:event_CincoBtnMouseClicked
-
-  private void CuatroBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CuatroBtnMouseClicked
-    servicios.setMostrar(servicios.getMostrar() + "4");
-    if (servicios.getAcumMostrar().length() <= 28) {
-      servicios.setAcumMostrar(servicios.getAcumMostrar() + "4");
-      Pantalla.setText(servicios.getAcumMostrar());
-      Pantalla1.setText(servicios.getMostrar());
-    } else {
-      Pantalla.setText("ERROR ");
-      Pantalla1.setText("Máximo de dígitos");
-      servicios.Reset();
-    }
-    igual = false;
-  }//GEN-LAST:event_CuatroBtnMouseClicked
-
-  private void ProductoBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProductoBtnMouseClicked
-    if (servicios.getOperacion().equals("")) {
-      servicios.setOperacion(" * ");
-      if (servicios.getAcumMostrar().length() <= 30) {
-        servicios.setAcumMostrar(servicios.getAcumMostrar() + " * ");
-      }
-      servicios.asignacion(servicios.getMostrar(), servicios.getNumeritos(), servicios.getNumeritos2(), servicios.getOperacion(), servicios.getAux());
-      Pantalla.setText(servicios.getAcumMostrar());
-      Pantalla1.setText(servicios.getMostrar());
-    }
-  }//GEN-LAST:event_ProductoBtnMouseClicked
-
-  private void NueveBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NueveBtnMouseClicked
-    servicios.setMostrar(servicios.getMostrar() + "9");
-    if (servicios.getAcumMostrar().length() <= 28) {
-      servicios.setAcumMostrar(servicios.getAcumMostrar() + "9");
-      Pantalla.setText(servicios.getAcumMostrar());
-      Pantalla1.setText(servicios.getMostrar());
-    } else {
-      Pantalla.setText("ERROR ");
-      Pantalla1.setText("Máximo de dígitos");
-      servicios.Reset();
-    }
-    igual = false;
-  }//GEN-LAST:event_NueveBtnMouseClicked
-
-  private void OchoBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OchoBtnMouseClicked
-    servicios.setMostrar(servicios.getMostrar() + "8");
-    if (servicios.getAcumMostrar().length() <= 28) {
-      servicios.setAcumMostrar(servicios.getAcumMostrar() + "8");
-      Pantalla.setText(servicios.getAcumMostrar());
-      Pantalla1.setText(servicios.getMostrar());
-    } else {
-      Pantalla.setText("ERROR ");
-      Pantalla1.setText("Máximo de dígitos");
-      servicios.Reset();
-    }
-    igual = false;
-  }//GEN-LAST:event_OchoBtnMouseClicked
-
-  private void SieteBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SieteBtnMouseClicked
-    servicios.setMostrar(servicios.getMostrar() + "7");
-    if (servicios.getAcumMostrar().length() <= 28) {
-      servicios.setAcumMostrar(servicios.getAcumMostrar() + "7");
-      Pantalla.setText(servicios.getAcumMostrar());
-      Pantalla1.setText(servicios.getMostrar());
-    } else {
-      Pantalla.setText("ERROR ");
-      Pantalla1.setText("Máximo de dígitos");
-      servicios.Reset();
-    }
-    igual = false;
-  }//GEN-LAST:event_SieteBtnMouseClicked
-
-  private void DividirBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DividirBtnMouseClicked
-    if (servicios.getOperacion().equals("")) {
-      servicios.setOperacion(" / ");
-      if (servicios.getAcumMostrar().length() <= 28) {
-        servicios.setAcumMostrar(servicios.getAcumMostrar() + " / ");
-        servicios.asignacion(servicios.getMostrar(), servicios.getNumeritos(), servicios.getNumeritos2(), servicios.getOperacion(), servicios.getAux());
+     servicios.setMostrar(servicios.getMostrar() + "1");
+     if (servicios.getAcumMostrar().length() <= 28) {
+        servicios.setAcumMostrar(servicios.getAcumMostrar() + "1");
         Pantalla.setText(servicios.getAcumMostrar());
         Pantalla1.setText(servicios.getMostrar());
-      } else {
+     } else {
         Pantalla.setText("ERROR ");
         Pantalla1.setText("Máximo de dígitos");
         servicios.Reset();
-      }
+     }
+     igual = false;
+  }//GEN-LAST:event_UnoBtnMouseClicked
 
-    }
+  private void RestaBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RestaBtnMouseClicked
+     if (servicios.getOperacion().equals("")) {
+        servicios.setOperacion(" - ");
+        if (servicios.getAcumMostrar().length() <= 30) {
+           servicios.setAcumMostrar(servicios.getAcumMostrar() + " - ");
+        }
+        servicios.asignacion(servicios.getMostrar(), servicios.getNumeritos(), servicios.getNumeritos2(), servicios.getOperacion(), servicios.getAux());
+        Pantalla.setText(servicios.getAcumMostrar());
+        Pantalla1.setText(servicios.getMostrar());
+     }
+  }//GEN-LAST:event_RestaBtnMouseClicked
+
+  private void SeisBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SeisBtnMouseClicked
+     servicios.setMostrar(servicios.getMostrar() + "6");
+     if (servicios.getAcumMostrar().length() <= 28) {
+        servicios.setAcumMostrar(servicios.getAcumMostrar() + "6");
+        Pantalla.setText(servicios.getAcumMostrar());
+        Pantalla1.setText(servicios.getMostrar());
+     } else {
+        Pantalla.setText("ERROR ");
+        Pantalla1.setText("Máximo de dígitos");
+        servicios.Reset();
+     }
+     igual = false;
+  }//GEN-LAST:event_SeisBtnMouseClicked
+
+  private void CincoBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CincoBtnMouseClicked
+     servicios.setMostrar(servicios.getMostrar() + "5");
+     if (servicios.getAcumMostrar().length() <= 28) {
+        servicios.setAcumMostrar(servicios.getAcumMostrar() + "5");
+        Pantalla.setText(servicios.getAcumMostrar());
+        Pantalla1.setText(servicios.getMostrar());
+     } else {
+        Pantalla.setText("ERROR ");
+        Pantalla1.setText("Máximo de dígitos");
+        servicios.Reset();
+     }
+     igual = false;
+  }//GEN-LAST:event_CincoBtnMouseClicked
+
+  private void CuatroBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CuatroBtnMouseClicked
+     servicios.setMostrar(servicios.getMostrar() + "4");
+     if (servicios.getAcumMostrar().length() <= 28) {
+        servicios.setAcumMostrar(servicios.getAcumMostrar() + "4");
+        Pantalla.setText(servicios.getAcumMostrar());
+        Pantalla1.setText(servicios.getMostrar());
+     } else {
+        Pantalla.setText("ERROR ");
+        Pantalla1.setText("Máximo de dígitos");
+        servicios.Reset();
+     }
+     igual = false;
+  }//GEN-LAST:event_CuatroBtnMouseClicked
+
+  private void ProductoBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProductoBtnMouseClicked
+     if (servicios.getOperacion().equals("")) {
+        servicios.setOperacion(" * ");
+        if (servicios.getAcumMostrar().length() <= 30) {
+           servicios.setAcumMostrar(servicios.getAcumMostrar() + " * ");
+        }
+        servicios.asignacion(servicios.getMostrar(), servicios.getNumeritos(), servicios.getNumeritos2(), servicios.getOperacion(), servicios.getAux());
+        Pantalla.setText(servicios.getAcumMostrar());
+        Pantalla1.setText(servicios.getMostrar());
+     }
+  }//GEN-LAST:event_ProductoBtnMouseClicked
+
+  private void NueveBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NueveBtnMouseClicked
+     servicios.setMostrar(servicios.getMostrar() + "9");
+     if (servicios.getAcumMostrar().length() <= 28) {
+        servicios.setAcumMostrar(servicios.getAcumMostrar() + "9");
+        Pantalla.setText(servicios.getAcumMostrar());
+        Pantalla1.setText(servicios.getMostrar());
+     } else {
+        Pantalla.setText("ERROR ");
+        Pantalla1.setText("Máximo de dígitos");
+        servicios.Reset();
+     }
+     igual = false;
+  }//GEN-LAST:event_NueveBtnMouseClicked
+
+  private void OchoBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OchoBtnMouseClicked
+     servicios.setMostrar(servicios.getMostrar() + "8");
+     if (servicios.getAcumMostrar().length() <= 28) {
+        servicios.setAcumMostrar(servicios.getAcumMostrar() + "8");
+        Pantalla.setText(servicios.getAcumMostrar());
+        Pantalla1.setText(servicios.getMostrar());
+     } else {
+        Pantalla.setText("ERROR ");
+        Pantalla1.setText("Máximo de dígitos");
+        servicios.Reset();
+     }
+     igual = false;
+  }//GEN-LAST:event_OchoBtnMouseClicked
+
+  private void SieteBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SieteBtnMouseClicked
+     servicios.setMostrar(servicios.getMostrar() + "7");
+     if (servicios.getAcumMostrar().length() <= 28) {
+        servicios.setAcumMostrar(servicios.getAcumMostrar() + "7");
+        Pantalla.setText(servicios.getAcumMostrar());
+        Pantalla1.setText(servicios.getMostrar());
+     } else {
+        Pantalla.setText("ERROR ");
+        Pantalla1.setText("Máximo de dígitos");
+        servicios.Reset();
+     }
+     igual = false;
+  }//GEN-LAST:event_SieteBtnMouseClicked
+
+  private void DividirBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DividirBtnMouseClicked
+     if (servicios.getOperacion().equals("")) {
+        servicios.setOperacion(" / ");
+        if (servicios.getAcumMostrar().length() <= 28) {
+           servicios.setAcumMostrar(servicios.getAcumMostrar() + " / ");
+           servicios.asignacion(servicios.getMostrar(), servicios.getNumeritos(), servicios.getNumeritos2(), servicios.getOperacion(), servicios.getAux());
+           Pantalla.setText(servicios.getAcumMostrar());
+           Pantalla1.setText(servicios.getMostrar());
+        } else {
+           Pantalla.setText("ERROR ");
+           Pantalla1.setText("Máximo de dígitos");
+           servicios.Reset();
+        }
+
+     }
   }//GEN-LAST:event_DividirBtnMouseClicked
 
   private void PorcentajeBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PorcentajeBtnMouseClicked
 
-    if (servicios.getPorcentaje().equals("")) {
-      servicios.setMostrar(servicios.getMostrar() + " % ");
-      if (servicios.getAcumMostrar().length() <= 28) {
-        servicios.setAcumMostrar(servicios.getAcumMostrar() + " % ");
-      }
-      servicios.setPorcentaje(" % ");
-      Pantalla.setText(servicios.getAcumMostrar());
-      Pantalla1.setText(servicios.getMostrar());
-    }
+     if (servicios.getPorcentaje().equals("")) {
+        servicios.setMostrar(servicios.getMostrar() + " % ");
+        if (servicios.getAcumMostrar().length() <= 28) {
+           servicios.setAcumMostrar(servicios.getAcumMostrar() + " % ");
+        }
+        servicios.setPorcentaje(" % ");
+        Pantalla.setText(servicios.getAcumMostrar());
+        Pantalla1.setText(servicios.getMostrar());
+     }
   }//GEN-LAST:event_PorcentajeBtnMouseClicked
 
   private void CbtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CbtnMouseClicked
-    servicios.setMostrar("");
-    servicios.setAcumMostrar("");
-    servicios.setOperacion("");
-    servicios.setAux("");
-    servicios.setPorcentaje("");
-    servicios.setNumeritos(0);
-    servicios.setNumeritos2(0);
-    Pantalla.setText(servicios.getAcumMostrar());
-    Pantalla1.setText(servicios.getMostrar());
-    igual = false;
+     servicios.setMostrar("");
+     servicios.setAcumMostrar("");
+     servicios.setOperacion("");
+     servicios.setAux("");
+     servicios.setPorcentaje("");
+     servicios.setNumeritos(0);
+     servicios.setNumeritos2(0);
+     Pantalla.setText(servicios.getAcumMostrar());
+     Pantalla1.setText(servicios.getMostrar());
+     igual = false;
   }//GEN-LAST:event_CbtnMouseClicked
 
   private void OFFbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OFFbtnActionPerformed
-    System.exit(0);
+     System.exit(0);
   }//GEN-LAST:event_OFFbtnActionPerformed
 
    private void UnoBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UnoBtnMouseEntered
@@ -865,7 +865,7 @@ public class Ventana1 extends javax.swing.JFrame {
    }//GEN-LAST:event_SumaBtnMouseEntered
 
    private void SumaBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SumaBtnMouseExited
-      Color color = new Color(255,100,40);
+      Color color = new Color(255, 100, 40);
       SumaBtn.setBackground(color);
    }//GEN-LAST:event_SumaBtnMouseExited
 
@@ -938,7 +938,7 @@ public class Ventana1 extends javax.swing.JFrame {
    }//GEN-LAST:event_DividirBtnMouseEntered
 
    private void DividirBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DividirBtnMouseExited
-       DividirBtn.setBackground(Color.BLACK);
+      DividirBtn.setBackground(Color.BLACK);
    }//GEN-LAST:event_DividirBtnMouseExited
 
    private void PorcentajeBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PorcentajeBtnMouseEntered
@@ -946,7 +946,7 @@ public class Ventana1 extends javax.swing.JFrame {
    }//GEN-LAST:event_PorcentajeBtnMouseEntered
 
    private void PorcentajeBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PorcentajeBtnMouseExited
-       PorcentajeBtn.setBackground(Color.BLACK);
+      PorcentajeBtn.setBackground(Color.BLACK);
    }//GEN-LAST:event_PorcentajeBtnMouseExited
 
    private void CbtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CbtnMouseEntered
@@ -960,44 +960,44 @@ public class Ventana1 extends javax.swing.JFrame {
    }//GEN-LAST:event_CbtnMouseExited
 
    private void OFFbtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OFFbtnMouseEntered
-      Color color = new Color(130,0,255);
+      Color color = new Color(130, 0, 255);
       OFFbtn.setBackground(color);
    }//GEN-LAST:event_OFFbtnMouseEntered
 
    private void OFFbtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OFFbtnMouseExited
-      Color color = new Color(160,0,0);
+      Color color = new Color(160, 0, 0);
       OFFbtn.setBackground(color);
    }//GEN-LAST:event_OFFbtnMouseExited
 
-  public static void main(String args[]) {
-    /* Set the Nimbus look and feel */
-    //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-    /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+   public static void main(String args[]) {
+      /* Set the Nimbus look and feel */
+      //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+      /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-     */
-    try {
-      for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-        if ("Nimbus".equals(info.getName())) {
-          javax.swing.UIManager.setLookAndFeel(info.getClassName());
-          break;
-        }
+       */
+      try {
+         for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+            if ("Nimbus".equals(info.getName())) {
+               javax.swing.UIManager.setLookAndFeel(info.getClassName());
+               break;
+            }
+         }
+      } catch (ClassNotFoundException ex) {
+         java.util.logging.Logger.getLogger(Ventana1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+      } catch (InstantiationException ex) {
+         java.util.logging.Logger.getLogger(Ventana1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+      } catch (IllegalAccessException ex) {
+         java.util.logging.Logger.getLogger(Ventana1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+      } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+         java.util.logging.Logger.getLogger(Ventana1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
       }
-    } catch (ClassNotFoundException ex) {
-      java.util.logging.Logger.getLogger(Ventana1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-    } catch (InstantiationException ex) {
-      java.util.logging.Logger.getLogger(Ventana1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-    } catch (IllegalAccessException ex) {
-      java.util.logging.Logger.getLogger(Ventana1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-    } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-      java.util.logging.Logger.getLogger(Ventana1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-    }
-    //</editor-fold>
+      //</editor-fold>
 
-    /* Create and display the form */
-    java.awt.EventQueue.invokeLater(() -> {
-      new Ventana1().setVisible(true);
-    });
-  }
+      /* Create and display the form */
+      java.awt.EventQueue.invokeLater(() -> {
+         new Ventana1().setVisible(true);
+      });
+   }
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
    private javax.swing.JButton Cbtn;
