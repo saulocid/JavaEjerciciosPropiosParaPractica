@@ -1,0 +1,4 @@
+María;Martínez;Argentina;34123456;15/08/1990;5491123456789;maria.martinez@email.com
+Ana;López;Colombia;987654321;03/03/1992;573219876543;ana.lopez@email.com
+Diego;Santos;Brasil;567890123;20/06/1988;551155555555;diego.santos@email.com
+Carla;Pachano;Venezuela;12489354;23/07/1999;584245151777;carla@email.com
