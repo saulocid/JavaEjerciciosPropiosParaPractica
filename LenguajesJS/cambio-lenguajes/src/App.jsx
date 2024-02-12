@@ -9,11 +9,15 @@ function App() {
   const [idioma, setIdioma] = useState('en');
   const [texto, setTexto] = useState(
     {
-      titulo: "Cambio de lenguaje",
-      informacion: "Éste es una aplicación web en la cual modificamos el lenguaje con una api de traducción. Al hacer click en el botón de las banderas de Argentina y EE.UU. se podrá ir modificando el mismo en tiempo real.",
-      contador: "El contador es",
-      mas: "Haz click en los logos de la aplicación y de 'React' para más información",
-      enlaces: "Enlaces a mis redes sociales y proyectos"
+      titulo: "",
+      informacion: "",
+      contador: "",
+      mas: "",
+      enlaces: {
+        cuerpo: "",
+        sueldo: "",
+        donar: ""
+      }
     }
   )
 
@@ -21,18 +25,26 @@ function App() {
     if (idioma === 'en') {
       setTexto({
         titulo: "Cambio de lenguaje",
-        informacion: "Éste es una aplicación web en la cual modificamos el lenguaje con una api de traducción. Al hacer click en el botón de las banderas de Argentina y EE.UU. se podrá ir modificando el mismo en tiempo real.",
+        informacion: "Haz click en el botón anterior para modificar el idioma de la página",
         contador: "El contador es",
         mas: "Haz click en los logos de la aplicación y de 'React' para más información",
-        enlaces: "Enlaces a mis redes sociales y proyectos"
+        enlaces: {
+          cuerpo: "Enlaces a mis redes sociales y proyectos",
+          sueldo: "Tu sueldo en dólares",
+          donar: "Donar"
+        }
       })
     } else {
       setTexto({
         titulo: "Language Change",
-        informacion: "This is a web application in which we modify the language with a translation API. By clicking on the button with the flags of Argentina and the USA you can modify it in real time.",
+        informacion: "Click on the previous button to modify the language of the page.",
         contador: "The count is",
         mas: "Click on the app and 'React' logos for more information",
-        enlaces: "Links to my social media and projects"
+        enlaces: {
+          cuerpo: "Links to my social media and projects",
+          sueldo: "Salary in dolars",
+          donar: "Donate"
+        }
       })
     }
   }, [idioma]);
@@ -67,7 +79,7 @@ function App() {
       </div>
 
       <p className="read-the-docs">{texto.mas}</p>
-      <Footer enlaces={texto.enlaces} />
+      <Footer cuerpo={texto.enlaces.cuerpo} sueldo={texto.enlaces.sueldo} donar={texto.enlaces.donar} />
     </>
   );
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 
-function Header({enlaces}) {
+function Header({cuerpo, sueldo, donar}) {
     const [anio, setAnio] = useState(0);
 
     useEffect(() => {
@@ -11,7 +11,7 @@ function Header({enlaces}) {
     return (
         <>
             <footer>
-                <h2>{enlaces}</h2>
+                <h2>{cuerpo}</h2>
                 <nav>
                     <ul>
                         <li>
@@ -26,12 +26,12 @@ function Header({enlaces}) {
                         </li>
                         <li>
                             <button>
-                                <a target="blank" href="https://tusueldoendolareshoy.github.io/">Salario en dólares</a>
+                                <a target="blank" href="https://tusueldoendolareshoy.github.io/">{sueldo}</a>
                             </button>
                         </li>
                         <li>
                             <button>
-                                <a target="blank" href="http://paypal.me/saulocid">Donar</a>
+                                <a target="blank" href="http://paypal.me/saulocid">{donar}</a>
                             </button>
                         </li>
                     </ul>
